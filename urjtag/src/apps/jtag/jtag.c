@@ -224,8 +224,8 @@ jtag_save_history (void)
 
 #else
 
-#define jtag_load_history() URJ_STATUS_OK
-#define jtag_save_history() URJ_STATUS_OK
+static int jtag_load_history (void) { return URJ_STATUS_OK; }
+static int jtag_save_history (void) { return URJ_STATUS_OK; }
 
 #endif /* HAVE_READLINE_HISTORY */
 
